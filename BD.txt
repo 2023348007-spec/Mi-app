@@ -1,0 +1,19 @@
+CREATE DATABASE fotografias_db;
+USE fotografias_db;
+
+CREATE TABLE P10_foto (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    descripcion VARCHAR(255) NOT NULL,
+    ruta_foto VARCHAR(255) NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE usuarios (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    email VARCHAR(255) NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    nombre VARCHAR(100) NOT NULL,
+    activo TINYINT(1) DEFAULT NULL,
+    fecha_creacion TIMESTAMP DEFAULT NULL,
+    PRIMARY KEY (id),
+    UNIQUE KEY (email)
+);
